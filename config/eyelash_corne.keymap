@@ -51,19 +51,19 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "QWERTY";
+        Base {
+            display-name = "Alphas";
             bindings = <
-&none       &kp Q        &kp W  &kp M       &kp P        &none                       &none         &none  &kp F    &kp U            &kp Y  &kp J        &none
-&sl 4       &kp R        &kp S  &kp T       &kp H        &kp X                &none  &none  &none  &kp Q  &kp N    &kp A            &kp I  &kp O        &sl 4
-&kp RETURN  &key_repeat  &kp C  &kp G       &kp D        &none  &kp RC(N0)           &none         &none  &kp L    &kp K            &kp V  &key_repeat  &kp RETURN
-                                &mt F4 ESC  &lt 2 SPACE  &sl 1                                     &sl 1  &lt 3 E  &kp RA(RC(DEL))
+&none       &kp Q        &kp W  &kp M       &kp P        &none                                    &kp RG(UP_ARROW)                   &none  &kp F    &kp U            &kp Y  &kp J        &none
+&sl 4       &kp R        &kp S  &kp T       &kp H        &kp X                &kp RG(LEFT_ARROW)  &none               &kp RG(RIGHT)  &kp Q  &kp N    &kp A            &kp I  &kp O        &sl 4
+&kp RETURN  &key_repeat  &kp C  &kp G       &kp D        &none  &kp RC(N0)                        &kp RG(DOWN_ARROW)                 &none  &kp L    &kp K            &kp V  &key_repeat  &kp RETURN
+                                &mt F4 ESC  &lt 2 SPACE  &sl 1                                                                       &sl 1  &lt 3 E  &kp RA(RC(DEL))
             >;
 
             sensor-bindings = <&inc_dec_kp RC(EQUAL) RC(MINUS)>;
         };
 
-        layer_1 {
+        Super {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -72,7 +72,7 @@
             >;
         };
 
-        layer_2 {
+        Navigation {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -81,7 +81,7 @@
             >;
         };
 
-        layer_3 {
+        Num+Sym {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -90,7 +90,7 @@
             >;
         };
 
-        layer_4 {
+        Ultra {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -100,6 +100,24 @@
         };
 
         layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
