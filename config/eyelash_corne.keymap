@@ -65,10 +65,10 @@
 
         Super {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans                    &trans          &trans  &trans             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans  &trans            &trans          &trans  &trans             &trans  &trans  &trans  &trans
+                        &trans  &kp RC(BACKSPACE)  &none                                     &none   &kp RC(BACKSPACE)  &trans
             >;
         };
 
