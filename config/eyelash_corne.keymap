@@ -172,6 +172,48 @@
             bindings = <&kp SQT &kp V &kp E &kp SPACE>;
             label = "APO_V";
         };
+
+        au: au {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp U>;
+            label = "AU";
+        };
+
+        sw: sw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp W>;
+            label = "SW";
+        };
+
+        vi: vi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &kp I>;
+            label = "VI";
+        };
+
+        cs: cs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp S>;
+            label = "CS";
+        };
+
+        fl: fl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp L>;
+            label = "FL";
+        };
+
+        lf: lf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp F>;
+            label = "LF";
+        };
     };
 
     keymap {
@@ -191,9 +233,9 @@
 
         Super {
             bindings = <
-&trans  &trans  &trans  &trans          &trans             &trans                    &trans          &trans  &trans             &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans          &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans          &trans             &trans  &trans            &trans          &trans  &trans             &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans          &trans             &trans                    &trans          &trans  &fl                &au             &trans  &trans  &trans
+&trans  &trans  &sw     &trans          &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans          &vi     &trans  &trans
+&trans  &trans  &cs     &trans          &trans             &trans  &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
                         &kp RC(DELETE)  &kp RC(BACKSPACE)  &none                                     &none   &kp RC(BACKSPACE)  &kp RC(DELETE)
             >;
         };
