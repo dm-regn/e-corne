@@ -67,6 +67,36 @@
         };
     };
 
+    macros {
+        carets: carets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp GT &kp LEFT_ARROW>;
+            label = "CARETS";
+        };
+
+        parents: parents {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "PARENTS";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "BRACKETS";
+        };
+
+        curls: curls {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT_ARROW>;
+            label = "CURLS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -104,10 +134,10 @@
 
         Num+Sym {
             bindings = <
-&trans  &trans  &kp N7       &kp N3  &kp N4  &trans                              &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0  &key_repeat  &kp N1  &kp N2  &kp N9                      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp N8       &kp N5  &kp N6  &trans            &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans  &mt COMMA PERIOD                                    &trans  &none   &trans
+&trans  &trans  &kp N7       &kp N3  &kp N4  &kp PERCENT                         &trans          &trans  &kp BACKSLASH  &kp POUND  &kp CARET  &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
+&trans  &kp N0  &key_repeat  &kp N1  &kp N2  &kp N9                      &trans  &trans  &trans  &trans  &kp ASTRK      &kp SLASH  &kp PLUS   &kp MINUS                       &mt COLON SEMI
+&trans  &trans  &kp N8       &kp N5  &kp N6  &kp DOLLAR        &trans            &trans          &trans  &carets        &parents   &brackets  &curls                          &trans
+                             &trans  &trans  &mt COMMA PERIOD                                    &trans  &none          &trans
             >;
         };
 
