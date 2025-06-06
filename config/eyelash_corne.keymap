@@ -273,10 +273,10 @@
 
         Num+Sym {
             bindings = <
-&trans     &trans  &kp N7       &kp N3  &kp N4  &kp PERCENT                         &trans          &trans    &kp BACKSLASH  &kp POUND  &kp CARET  &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
-&kp EQUAL  &kp N0  &key_repeat  &kp N1  &kp N2  &kp N9                      &trans  &trans  &trans  &kp PIPE  &kp ASTRK      &kp SLASH  &kp PLUS   &kp MINUS                       &mt COLON SEMI
-&trans     &trans  &kp N8       &kp N5  &kp N6  &kp DOLLAR        &trans            &trans          &trans    &carets        &parents   &brackets  &curls                          &to 3
-                                &trans  &trans  &mt COMMA PERIOD                                    &trans    &none          &trans
+&trans     &trans  &kp N7       &kp N3  &kp N4  &kp PERCENT                         &trans          &trans    &kp BACKSLASH                   &kp POUND                           &kp CARET              &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
+&kp EQUAL  &kp N0  &key_repeat  &kp N1  &kp N2  &kp N9                      &trans  &trans  &trans  &kp PIPE  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                       &mt COLON SEMI
+&trans     &trans  &kp N8       &kp N5  &kp N6  &kp DOLLAR        &trans            &trans          &trans    &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET   &to 3
+                                &trans  &trans  &mt COMMA PERIOD                                    &trans    &none                           &trans
             >;
         };
 
@@ -291,10 +291,10 @@
 
         layer_5 {
             bindings = <
-&none   &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &none
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&none   &trans  &trans  &trans  &trans    &trans                     &trans          &trans  &trans     &trans  &trans  &trans  &none
+&trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans   &trans            &trans          &trans  &trans     &trans  &trans  &trans  &trans
+                        &trans  &parents  &carets                                    &curls  &brackets  &trans
             >;
         };
 
