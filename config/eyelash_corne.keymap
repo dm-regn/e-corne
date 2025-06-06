@@ -62,7 +62,7 @@
 
         input {
             bindings = <&out OUT_TOG>;
-            key-positions = <22 23>;
+            key-positions = <5 0>;
             layers = <2>;
         };
     };
