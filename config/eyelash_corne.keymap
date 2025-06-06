@@ -273,19 +273,19 @@
 
         Num+Sym {
             bindings = <
-&trans  &trans  &kp N7       &kp N3  &kp N4  &kp PERCENT                         &trans          &trans  &kp BACKSLASH  &kp POUND  &kp CARET  &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
-&trans  &kp N0  &key_repeat  &kp N1  &kp N2  &kp N9                      &trans  &trans  &trans  &trans  &kp ASTRK      &kp SLASH  &kp PLUS   &kp MINUS                       &mt COLON SEMI
-&trans  &trans  &kp N8       &kp N5  &kp N6  &kp DOLLAR        &trans            &trans          &trans  &carets        &parents   &brackets  &curls                          &to 3
-                             &trans  &trans  &mt COMMA PERIOD                                    &trans  &none          &trans
+&trans  &trans  &kp N7       &kp N3  &kp N4  &kp PERCENT                         &trans          &trans    &kp BACKSLASH  &kp POUND  &kp CARET  &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
+&trans  &kp N0  &key_repeat  &kp N1  &kp N2  &kp N9                      &trans  &trans  &trans  &kp PIPE  &kp ASTRK      &kp SLASH  &kp PLUS   &kp MINUS                       &mt COLON SEMI
+&trans  &trans  &kp N8       &kp N5  &kp N6  &kp DOLLAR        &trans            &trans          &trans    &carets        &parents   &brackets  &curls                          &to 3
+                             &trans  &trans  &mt COMMA PERIOD                                    &trans    &none          &trans
             >;
         };
 
         Ultra {
             bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans                     &trans          &trans    &trans  &trans                    &apo_y  &trans  &trans
-&none   &apo_r  &apo_s  &apo_t     &trans  &trans             &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &none
-&trans  &trans  &trans  &trans     &trans  &trans   &trans            &trans          &trans    &apo_L  &trans                    &apo_v  &trans  &trans
-                        &kp UNDER  &comma  &period                                    &kp AMPS  &kp AT  &mt QUESTION EXCLAMATION
+&trans  &trans  &trans  &trans           &trans  &trans                     &trans          &trans    &trans  &trans                    &apo_y  &trans  &trans
+&none   &apo_r  &apo_s  &apo_t           &trans  &trans             &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &none
+&trans  &trans  &trans  &trans           &trans  &trans   &trans            &trans          &trans    &apo_L  &trans                    &apo_v  &trans  &trans
+                        &mt TILDE UNDER  &comma  &period                                    &kp AMPS  &kp AT  &mt QUESTION EXCLAMATION
             >;
         };
 
