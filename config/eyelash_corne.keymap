@@ -304,6 +304,13 @@
             bindings = <&kp N &kp SQT>;
             label = "APO_N";
         };
+
+        ua: ua {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp A>;
+            label = "UA";
+        };
     };
 
     keymap {
@@ -323,8 +330,8 @@
 
         Super {
             bindings = <
-&kp DELETE  &trans  &trans  &trans          &pd                &kp BACKSPACE                    &trans          &trans  &fl                &au             &trans  &trans  &trans
-&trans      &trans  &sw     &trans          &trans             &trans                   &trans  &trans  &trans  &trans  &trans             &trans          &vi     &trans  &trans
+&kp DELETE  &trans  &trans  &trans          &pd                &kp BACKSPACE                    &trans          &trans  &fl                &ua             &trans  &trans  &trans
+&trans      &trans  &sw     &trans          &trans             &trans                   &trans  &trans  &trans  &trans  &trans             &au             &vi     &trans  &trans
 &trans      &trans  &cs     &gm             &trans             &trans         &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
                             &kp RC(DELETE)  &kp RC(BACKSPACE)  &none                                            &none   &kp RC(BACKSPACE)  &kp RC(DELETE)
             >;
