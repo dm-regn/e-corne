@@ -290,6 +290,13 @@
             bindings = <&kp F &kp E>;
             label = "FE";
         };
+
+        apo_c: apo_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp SQT>;
+            label = "APO_C";
+        };
     };
 
     keymap {
@@ -340,7 +347,7 @@
             bindings = <
 &trans  &trans  &trans  &trans           &trans  &trans                     &trans          &trans    &trans  &trans                    &apo_y  &trans  &trans
 &none   &apo_r  &apo_s  &apo_t           &trans  &trans             &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &none
-&trans  &trans  &trans  &trans           &trans  &trans   &trans            &trans          &trans    &apo_L  &trans                    &apo_v  &trans  &trans
+&trans  &trans  &apo_c  &trans           &trans  &trans   &trans            &trans          &trans    &apo_L  &trans                    &apo_v  &trans  &trans
                         &mt TILDE UNDER  &comma  &period                                    &kp AMPS  &kp AT  &mt QUESTION EXCLAMATION
             >;
         };
