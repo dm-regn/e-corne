@@ -276,6 +276,20 @@
             bindings = <&kp P &kp D>;
             label = "PD";
         };
+
+        ef: ef {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp F>;
+            label = "EF";
+        };
+
+        fe: fe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp E>;
+            label = "FE";
+        };
     };
 
     keymap {
@@ -333,10 +347,10 @@
 
         layer_5 {
             bindings = <
-&none   &trans  &trans  &trans  &trans    &trans                     &trans          &trans  &trans     &trans  &trans  &trans  &none
-&trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans   &trans            &trans          &trans  &trans     &trans  &trans  &trans  &trans
-                        &trans  &parents  &carets                                    &curls  &brackets  &trans
+&none   &curls  &brackets  &parents  &carets  &trans                    &trans          &trans  &fe     &trans  &trans  &trans  &none
+&trans  &trans  &trans     &trans    &trans   &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans    &trans   &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans    &none    &none                                     &none   &ef     &trans
             >;
         };
 
