@@ -360,8 +360,8 @@
 
         Navigation {
             bindings = <
-&trans   &none            &mt HOME PG_UP   &kp UP_ARROW     &mt END PG_DN    &trans                               &kp C_PLAY_PAUSE              &trans     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &kp RG(RS(D))  &trans
-&kp TAB  &kp LG(R)        &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &trans               &kp C_PREVIOUS  &trans            &kp C_NEXT  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK      &trans
+&trans   &kp LALT         &mt HOME PG_UP   &kp UP_ARROW     &mt END PG_DN    &trans                               &kp C_PLAY_PAUSE              &trans     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &kp RG(RS(D))  &trans
+&kp TAB  &kp LG(R)        &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp LGUI             &kp C_PREVIOUS  &trans            &kp C_NEXT  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK      &trans
 &to 2    &mt RC(F) RC(A)  &mt RG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &bt BT_CLR  &to 0                    &kp C_MUTE                    &trans     &kp RSHFT       &kp RCTRL       &kp RALT         &kp RGUI       &trans
                                            &trans           &none            &trans                                                             &dbl_mclk  &mkp LCLK       &trans
             >;
