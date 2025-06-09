@@ -332,6 +332,27 @@
             bindings = <&kp B &kp L &kp E>;
             label = "BLE";
         };
+
+        Le: Le {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp E>;
+            label = "LE";
+        };
+
+        ke: ke {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp E>;
+            label = "KE";
+        };
+
+        ve: ve {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &kp E>;
+            label = "VE";
+        };
     };
 
     keymap {
@@ -391,18 +412,20 @@
             bindings = <
 &none   &curls  &brackets  &parents  &carets  &trans                    &trans          &trans  &fe     &trans  &trans  &trans  &none
 &trans  &trans  &trans     &trans    &trans   &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans    &trans   &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans    &trans   &trans  &trans            &trans          &trans  &Le     &ke     &ve     &trans  &trans
                            &trans    &none    &none                                     &none   &ef     &trans
             >;
         };
 
         lazy {
             bindings = <
-&trans  &super_ad  &main_ad  &not_app  &year   &none                     &trans          &none   &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans    &trans  &trans                                    &trans  &trans  &trans
+&trans  &super_ad  &main_ad  &not_app  &year   &none                              &trans          &none   &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans  &trans  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans    &trans  &trans                                             &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&rgb_encoder>;
         };
 
         dot {
@@ -412,6 +435,8 @@
 &trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none   &trans            &trans          &none   &trans  &trans  &trans  &trans  &trans
                             &trans    &trans    &trans                                    &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
