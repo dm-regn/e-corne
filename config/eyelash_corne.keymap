@@ -311,6 +311,20 @@
             bindings = <&kp U &kp A>;
             label = "UA";
         };
+
+        ox: ox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp X>;
+            label = "OX";
+        };
+
+        ax: ax {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp X>;
+            label = "AX";
+        };
     };
 
     keymap {
@@ -319,7 +333,7 @@
         Base {
             display-name = "Alphas";
             bindings = <
-&sl 5       &kp X        &kp W           &kp M        &mt PRINTSCREEN P  &sl 6                                    &kp RG(UP_ARROW)                   &sl 6  &kp F        &kp U                     &kp Y            &kp Q        &sl 5
+&sl 5       &kp Q        &kp W           &kp M        &mt PRINTSCREEN P  &sl 6                                    &kp RG(UP_ARROW)                   &sl 6  &kp F        &kp U                     &kp Y            &kp X        &sl 5
 &sl 4       &mt LGUI R   &mt LEFT_ALT S  &mt LCTRL T  &mt LEFT_SHIFT H   &kp B                &kp RG(LEFT_ARROW)  &kp RG(D)           &kp RG(RIGHT)  &kp J  &mt RSHFT N  &mt RCTRL A               &mt RIGHT_ALT I  &mt RGUI O   &sl 4
 &kp RETURN  &key_repeat  &kp C           &kp G        &kp D              &sl 7  &kp RC(N0)                        &kp RG(DOWN_ARROW)                 &sl 7  &kp L        &kp K                     &kp V            &key_repeat  &kp RETURN
                                          &mt F4 ESC   &lt 2 SPACE        &sl 1                                                                       &sl 1  &lt 3 E      &mt RG(L) RA(RC(DELETE))
@@ -330,8 +344,8 @@
 
         Super {
             bindings = <
-&kp DELETE  &trans  &trans  &trans          &pd                &kp BACKSPACE                    &trans          &trans  &fl                &ua             &trans  &trans  &trans
-&trans      &trans  &sw     &trans          &trans             &trans                   &trans  &trans  &trans  &trans  &trans             &au             &vi     &trans  &trans
+&kp DELETE  &trans  &trans  &trans          &pd                &kp BACKSPACE                    &trans          &trans  &fl                &ua             &trans  &ax     &trans
+&trans      &trans  &sw     &trans          &trans             &kp Z                    &trans  &trans  &trans  &trans  &trans             &au             &vi     &ox     &trans
 &trans      &trans  &cs     &gm             &trans             &trans         &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
                             &kp RC(DELETE)  &kp RC(BACKSPACE)  &none                                            &none   &kp RC(BACKSPACE)  &kp RC(DELETE)
             >;
