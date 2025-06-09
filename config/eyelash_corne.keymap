@@ -353,6 +353,13 @@
             bindings = <&kp V &kp E>;
             label = "VE";
         };
+
+        eve: eve {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp V &kp E>;
+            label = "EVE";
+        };
     };
 
     keymap {
@@ -432,7 +439,7 @@
             bindings = <
 &trans  &trans    &trans    &trans    &trans    &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans    &trans    &trans    &trans    &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none   &trans            &trans          &none   &trans  &trans  &trans  &trans  &trans
+&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none   &trans            &trans          &none   &trans  &trans  &eve    &trans  &trans
                             &trans    &trans    &trans                                    &trans  &trans  &trans
             >;
 
