@@ -360,6 +360,20 @@
             bindings = <&kp E &kp V &kp E>;
             label = "EVE";
         };
+
+        exe: exe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp X &kp E>;
+            label = "EXE";
+        };
+
+        je: je {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp J &kp E>;
+            label = "JE";
+        };
     };
 
     keymap {
@@ -417,8 +431,8 @@
 
         quick {
             bindings = <
-&none   &curls  &brackets  &parents  &carets  &trans                    &trans          &trans  &fe     &trans  &trans  &trans  &none
-&trans  &trans  &trans     &trans    &trans   &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none   &curls  &brackets  &parents  &carets  &trans                    &trans          &trans  &fe     &trans  &trans  &exe    &none
+&trans  &trans  &trans     &trans    &trans   &trans            &trans  &trans  &trans  &je     &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans    &trans   &trans  &trans            &trans          &trans  &Le     &ke     &ve     &trans  &trans
                            &trans    &none    &none                                     &none   &ef     &trans
             >;
