@@ -234,6 +234,41 @@
             bindings = <&kp DOT &kp SPACE>;
             label = "PERIOD";
         };
+
+        gm: gm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp M>;
+            label = "GM";
+        };
+
+        dot_com: dot_com {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp C &kp O &kp M>;
+            label = "DOT_COM";
+        };
+
+        dot_net: dot_net {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp N &kp E &kp T>;
+            label = "DOT_NET";
+        };
+
+        dot_org: dot_org {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp O &kp R &kp G>;
+            label = "DOT_ORG";
+        };
+
+        dot_gov: dot_gov {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp G &kp O &kp V>;
+            label = "DOT_GOV";
+        };
     };
 
     keymap {
@@ -255,7 +290,7 @@
             bindings = <
 &trans  &trans  &trans  &trans          &trans             &trans                    &trans          &trans  &fl                &au             &trans  &trans  &trans
 &trans  &trans  &sw     &trans          &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans          &vi     &trans  &trans
-&trans  &trans  &cs     &trans          &trans             &trans  &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
+&trans  &trans  &cs     &gm             &trans             &trans  &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
                         &kp RC(DELETE)  &kp RC(BACKSPACE)  &none                                     &none   &kp RC(BACKSPACE)  &kp RC(DELETE)
             >;
         };
@@ -309,10 +344,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &none   &trans            &trans          &none   &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none   &trans            &trans          &none   &trans  &trans  &trans  &trans  &trans
+                            &trans    &trans    &trans                                    &trans  &trans  &trans
             >;
         };
     };
