@@ -376,6 +376,13 @@
             bindings = <&kp J &kp E>;
             label = "JE";
         };
+
+        ph: ph {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp H>;
+            label = "PH";
+        };
     };
 
     keymap {
@@ -395,9 +402,9 @@
 
         Super {
             bindings = <
-&kp DELETE  &kp Z   &trans  &trans          &pd                &kp BACKSPACE                    &trans          &trans  &fl                &ua             &trans  &ax     &trans
-&trans      &trans  &sw     &trans          &trans             &ble                     &trans  &trans  &trans  &trans  &trans             &au             &vi     &ox     &trans
-&trans      &trans  &cs     &gm             &trans             &trans         &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
+&kp DELETE  &kp Z   &trans  &trans          &ph                &kp BACKSPACE                    &trans          &trans  &fl                &ua             &trans  &ax     &trans
+&sk LSHFT   &trans  &sw     &trans          &trans             &ble                     &trans  &trans  &trans  &trans  &trans             &au             &vi     &ox     &sk RSHFT
+&trans      &trans  &cs     &gm             &pd                &trans         &trans            &trans          &trans  &lf                &trans          &trans  &trans  &trans
                             &kp RC(DELETE)  &kp RC(BACKSPACE)  &none                                            &none   &kp RC(BACKSPACE)  &kp RC(DELETE)
             >;
         };
